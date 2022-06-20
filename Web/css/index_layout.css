@@ -1,0 +1,208 @@
+/*body與常見元素*/
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #00000003;
+}
+
+a {
+  white-space: nowrap;
+}
+
+ul {
+  white-space: nowrap;
+}
+
+/*主要內容區塊*/
+
+/*拉選式左導覽列*/
+#sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #222629;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  transition: 0.5s;
+}
+
+.close {
+  width: 0px !important;
+}
+
+.baritem {
+  width: 250px;
+}
+
+#sidebar .baritem span {
+  padding: 20px 8px 20px 32px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  display: block;
+  transition: 0.3s;
+}
+
+#sidebar .baritem a {
+  padding: 20px 8px 20px 32px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  display: block;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.baritem span {
+  cursor: pointer;
+}
+
+.baritem span:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.baritem a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#sidebar #closesidebar {
+  float: right;
+  font-size: 35px;
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+#closesidebar:hover {
+  transform: rotate(90deg);
+  transition: 0.3s;
+}
+
+.baritem span {
+  display: flex;
+  align-items: center;
+}
+
+.baritem>.active {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: pink !important;
+}
+
+#closeblock {
+  width: 100%;
+  height: 35px;
+}
+
+#imageBlock {
+  width: 250px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#iconMember {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  text-align: center;
+}
+
+/*網頁表頭*/
+body>header {
+  width: 100%;
+  background-color: rgba(17, 17, 17, 0.75);
+}
+
+.menucontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+
+.navblock {
+  display: flex;
+  margin-left: 3%;
+}
+
+
+.inline-block-nav {
+  display: flex;
+  align-items: center;
+}
+
+.inline-block-nav>li {
+  display: inline;
+  margin: 0 30px;
+}
+
+.inline-block-nav>li :hover {
+  color: rgb(230, 227, 227);
+}
+
+.inline-block-nav>li>a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+}
+
+#navright {
+  height: 100%;
+}
+
+#navright ul {
+  margin: 0;
+  height: 100%;
+}
+
+#navright li {
+  margin: 0 15px;
+}
+
+/*開啟左導覽列按鈕*/
+
+#menubtn {
+  cursor: pointer;
+}
+
+/*網頁商標*/
+#brand {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  margin-left: 40px;
+  margin-right: 15px;
+}
+
+#brand img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+/*視差背景圖*/
+body>.header {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("http://picsum.photos/1280/720?random=10");
+  width: 100%;
+}
+
+/*全部置中*/
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*響應式網頁*/

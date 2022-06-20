@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', '微軟正黑體', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.option {
+    display: flex;
+}
+
+.option .useroption {
+    width: 50%;
+    padding: 2px 0;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+
+.option .selleroption {
+    width: 50%;
+    text-align: center;
+    padding: 2px 0;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+
+.option>*:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.option .active {
+    background-color: #333;
+    color: #fff;
+}
+
+.chatitem {
+    position: fixed;
+    width: 100vh;
+    z-index: 4;
+}
+
+.wrapper {
+    position: fixed;
+    right: 80px;
+    bottom: 0;
+    background: #fff;
+    width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+        0 10px 10px -48px rgba(0, 0, 0, 0.8);
+    
+}
+
+.chaticon {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin: 0 15px 15px 0;
+    border-radius: 100%;
+    background: #fff;
+    box-shadow: 0 0 128px 0 rgb(0 0 0 / 10%),
+        2px 3px 5px 0px rgb(0 0 0 / 40%);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.users {
+    padding: 25px 30px;
+}
+
+.close {
+    height: 0;
+}
+
+/* 使用者列表 */
+
+.users header,
+.users-list a {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.users-list a {
+    cursor: pointer;
+}
+
+.users-list a:hover {
+    background-color: rgb(236, 236, 236);
+}
+
+
+.wrapper img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+:is(.users, .users-list) .chat-content {
+    display: flex;
+    align-items: center;
+}
+
+.users header .chat-content img {
+    height: 50px;
+    width: 50px;
+}
+
+:is(.users, .users-list) .details {
+    color: #000;
+    margin-left: 15px;
+}
+
+:is(.users, .users-list) .details span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.users header .logout {
+    color: #fff;
+    padding: 7px 15px;
+    background: #333;
+    border-radius: 5px;
+}
+
+.users .search {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.users .search .text {
+    padding-left: 2px;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.users .search input {
+    position: absolute;
+    height: 42px;
+    width: calc(100% - 50px);
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.users .search input.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+}
+
+.users .search button {
+    width: 47px;
+    height: 42px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #333;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 0 5px 5px 0;
+    transition: all 0.2s ease;
+}
+
+.users .search button.active {
+    color: #333;
+    background: #fff;
+}
+
+.users .search button.active i::before {
+    content: "\f00d";
+}
+
+.users-list {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+:is(.users-list, .chat-box)::-webkit-scrollbar {
+    width: 10px;
+}
+
+:is(.users-list, .chat-box)::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #e2e2e2;
+}
+
+.users-list a {
+    margin-bottom: 15px;
+    page-break-after: 10px;
+    padding-right: 15px;
+    border-bottom-color: #f1f1f1;
+}
+
+.users-list a:last-child {
+    border: none;
+    margin-bottom: 0px;
+}
+
+.users-list a .chat-content img {
+    height: 40px;
+    width: 40px;
+}
+
+.users-list a .chat-content p {
+    color: #67676a;
+}
+
+.users-list a .status-dot {
+    font-size: 12px;
+    color: #468669;
+}
+
+.users-list a .status-dot.offline {
+    color: #ccc;
+}
+
+/* 聊天內容 */
+
+.chat-area header {
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+}
+
+.chat-area header .back-icon {
+    font-size: 18px;
+    color: #333;
+}
+
+.chat-area header img {
+    height: 45px;
+    width: 45px;
+    margin: 0 15px;
+}
+
+.chat-area header span {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.chat-box {
+    height: 400px;
+    background: #f7f7f7;
+    padding: 10px 30px 20px 30px;
+    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
+        inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
+    overflow-y: auto;
+}
+
+.chat-box .chat {
+    margin: 15px 0;
+}
+
+.chat-box .chat p {
+    word-wrap: break-word;
+    padding: 8px 16px;
+    box-shadow: 0 0 32px rgb(0 0 0 / 8%),
+        0 16px 16px -16px rgb(0 0 0 / 10%);
+}
+
+.chat-box .outgoing {
+    display: flex;
+}
+
+.outgoing .details {
+    margin-left: auto;
+    max-width: calc(100% - 130px);
+}
+
+.outgoing .details p {
+    background: #333;
+    color: #fff;
+    border-radius: 18px 18px 0 18px;
+}
+
+.chat-box .incoming {
+    display: flex;
+    align-items: flex-end;
+}
+
+.chat-box .incoming img {
+    height: 35px;
+    width: 35px;
+}
+
+.incoming .details {
+    margin-left: 10px;
+    margin-right: auto;
+    max-width: calc(100% - 130px);
+}
+
+.incoming .details p {
+    background: #fff;
+    color: #333;
+    border-radius: 18px 18px 18px 0;
+}
+
+.chat-area .typing-area {
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.typing-area input {
+    height: 45px;
+    width: calc(100% - 58px);
+    font-size: 17px;
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.typing-area button {
+    width: 55px;
+    border: none;
+    outline: none;
+    background: #333;
+    color: #fff;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}

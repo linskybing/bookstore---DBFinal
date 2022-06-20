@@ -1,0 +1,146 @@
+.container {
+    margin-top: 80px;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(245, 243, 243, 0.438);
+}
+
+.bar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 300px;
+    background-color: white;
+    border-right: 1px solid rgb(163, 163, 163);
+}
+
+.bar>ul {
+    padding: 50px;
+    list-style-type: none;
+    font-size: 24px
+}
+
+ul {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.bar>ul li {
+    cursor: pointer;
+    padding: 5px 0;
+    width: 100%;
+}
+
+.collapse li:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+.collapse ul {
+    padding-left: 30px;
+}
+
+.collapse li {
+    border-radius: 25px;
+    width: 150px !important;
+}
+
+
+.profile {
+    width: calc(100% - 240 px);
+}
+
+.detail {
+    margin-left: 300px;
+    padding: 30px;
+    height: 400%;
+    width: 80%;
+}
+
+
+.detail .content {
+    margin-top: 50px;
+    background-color: white;
+    width: 100%;
+    height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.membericon {
+    display: flex;
+    align-items: center;
+}
+
+#name {
+    padding-left: 30px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#name+span {
+    padding-left: 20px;
+    color: rgb(97, 97, 97);
+    cursor: pointer;
+}
+
+.membericon .icon {
+    position: relative;
+}
+
+.membericon img {
+    background-color: white;
+    margin-top: -45px;
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    border-radius: 100%;
+    border: 1px solid #ddd;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.membericon #button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    outline: none;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.membericon #button:hover {
+    border: 1px solid rgb(230, 230, 230);
+}
+
+.membericon input[type=file] {
+    display: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    z-index: 5;
+}
+
+.icon div {
+    position: absolute;
+    top: -40px;
+    left: 95px;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
+
+.content-group {
+    display: flex;
+    align-items: center;
+    padding: 10px 150px;
+}
+
+.content-group span {
+    font-size: 20px;
+    padding: 0 10px;
+}

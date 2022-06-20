@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', '微軟正黑體', sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body *::-webkit-scrollbar {
+    width: 10px;
+}
+
+body *::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #e2e2e2;
+    cursor: pointer;
+}
+
+.mailsidebar {
+    display: flex;
+    flex-direction: column;
+    height: 92vh;
+    width: 300px;
+    content: "";
+    border-right: 1px solid #e5e9f2;
+}
+
+.mailsidebar .mail {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    content: "";
+    padding: 10px;
+    overflow-y: scroll;
+    cursor: pointer;
+}
+
+.mailsidebar .mail:not(:last-child) {
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.mailsidebar .mail .icon {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 100%;
+}
+
+.mailsidebar .mail .icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.mailsidebar .box {
+    padding: 0 10px;
+}
+
+.mailsidebar .box .title {
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.readmark {
+    background-color: #f5f5f5c5;
+}
+
+.mailcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 89vh;
+    width: calc(100% - 300px);
+}
+
+.mailcontent .action {
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    height: 70px;
+    display: none;
+}
+
+.mailcontent .action .return {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.mailcontent .action .return:hover {
+    background-color: #5264846e;
+}
+
+.hidden {
+    display: none;
+}
+
+.mailcontent .title {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70px;
+    padding: 20px;
+    border-bottom: 1px solid #e5e9f2;
+}
+
+.mail-inside {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.mail-inside>div:not(.first) {
+    margin: 20px;
+}
+
+.mail-inside .mail-head {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    padding-left: 45px;
+}
+
+.mail-inside .icon {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+}
+
+.mail-inside .icon .image {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;   
+}
+
+.mail-inside .icon .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.mail-inside .icon .name {
+    margin-left: 10px;
+    font-weight: bolder;
+}
+
+.mail-inside .date {
+    width: 200px;
+    margin-right: 5%;
+}
+
+.mail-inside-content {
+    margin-left: 100px;
+}
+
+.mail-inside-content p {
+    word-wrap: break-word;
+}
+
+.mail-reply {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 30vh;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #e5e9f2;
+}
+
+.mail-reply .reply-title {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    padding: 2px;
+    font-weight: bolder;
+    border-bottom: 1px solid #e5e9f2;
+}
+
+.mail-reply .reply {
+    padding: 5px;
+    width: 100%;
+    height: 95px;
+}
+
+.mail-reply .reply textarea {
+    width: 98%;
+    height: 90%;
+    border: none;
+    outline: none;
+}
+
+.mail-reply .footer-action {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border-top: 1px solid #e5e9f2;
+}
