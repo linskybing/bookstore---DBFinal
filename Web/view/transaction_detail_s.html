@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員中心</title>
+    <link href="../css/header.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/checkout.css">
+    <link rel="stylesheet" href="../css/deal/details.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+    <header></header>
+    <section>
+        <div class="title">
+            <h1>會員中心</h1>
+            <span>
+                <a href="#">首頁 </a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <a href="#">會員中心</a>
+            </span>
+        </div>
+        <div class="background">
+        </div>
+        <div class="membericon">
+            <div class="icon">
+                <div>
+                    <label for="filein" id="button"><i class="fa-solid fa-pen"></i></label>
+                    <input type="file" id="filein">
+                </div>
+                <img src="../image/user.png" alt="">
+            </div>
+            <div id="name" style="color: white;font-weight: bolder;">
+                <span>asdf</span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="left-sidebar">
+                <ul>
+                    <li id="member_m">
+                        <a href="profile.html">會員管理</a>
+                    </li>
+                    <li id="buyer_m">
+                        買家管理
+                        <div class="arrow"><i class="fa-solid fa-angle-right"></i></div>
+                    </li>
+                    <li class="list-item close">
+                        <div class="div_2">
+                            <ul>
+                                <li>
+                                    <a href="rent/transaction_rent.html">租借紀錄</a>
+                                </li>
+                                <li>
+                                    <a href="transaction_history.html">交易紀錄</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="seller_m">
+                        賣家管理
+                        <div class="arrow rotate"><i class="fa-solid fa-angle-right"></i></div>
+                    </li>
+                    <li class="list-item">
+                        <div class="div_2">
+                            <ul>
+                                <li>
+                                    <a href="profile_product.html">
+                                        商品販售管理
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="profile_product_rent.html">
+                                        商品租借管理
+                                    </a>
+                                </li>                               
+                                <li class="active">
+                                    <a href="transaction_history_seller.html">
+                                        訂單管理
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="rent_s/transaction_rent.html">租借訂單</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="problem_reply">
+                        <a href="mailbox.html">問題回報</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-content">
+                <div class="done">
+                    <div class="done_info_group">
+                        <div class="table-wrapper">
+                            <h2>訂單明細</h2>
+                            <table class="flex-table">
+                                <thead>
+                                    <tr>
+                                        <th>訂單編號</th>
+                                        <th>商品名稱</th>
+                                        <th>商品數量</th>
+                                        <th>商品價格</th>
+                                        <th>總計</th>
+                                        <th>交易方式</th>
+                                        <th>地址</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </section>
+    <div class="modal hidden">
+
+    </div>
+
+</body>
+<!-- API -->
+<script src="../js/api/chatroom.js"></script>
+<script src="../js/api/user.js"></script>
+<script src="../js/api/category.js"></script>
+<script src="../js/api/dealrecord.js"></script>
+<script src="../js/api/dealreview.js"></script>
+<script src="../js/api/problem.js"></script>
+
+<!-- 頁面 -->
+<script src="../js/chatusers.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/profile/profile_p.js"></script>
+<script src="../js/profile/category.js"></script>
+<script src="../js/deals/detailforseller.js"></script>
+<script src="../js/bottom.js"></script>
+
+
+</html>

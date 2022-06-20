@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/mailbox.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/mailbox_style.css">
+
+</head>
+
+<body>
+    <header></header>
+    <section>
+        <div class="title">
+            <h1>會員中心</h1>
+            <span>
+                <a href="#">首頁 </a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <a href="#">會員中心</a>
+            </span>
+        </div>
+        <div class="background">
+        </div>
+        <div class="membericon">
+            <div class="icon">
+                <div>
+                    <label for="filein" id="button"><i class="fa-solid fa-pen"></i></label>
+                    <input type="file" id="filein">
+                </div>
+                <img src="../image/user.png" alt="">
+            </div>
+            <div id="name" style="color: white;font-weight: bolder;">
+                <span>asdf</span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="left-sidebar">
+                <ul>
+                    <li id="member_m">
+                        <a href="profile.html">會員管理</a>
+                    </li>
+                    <li id="buyer_m">
+                        買家管理
+                        <div class="arrow"><i class="fa-solid fa-angle-right"></i></div>
+                    </li>
+                    <li class="list-item close">
+                        <div class="div_2">
+                            <ul>
+                                <li>
+                                    <a href="rent/transaction_rent.html">租借紀錄</a>
+                                </li>
+                                <li>
+                                    <a href="transaction_history.html">交易紀錄</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="seller_m">
+                        賣家管理
+                        <div class="arrow"><i class="fa-solid fa-angle-right"></i></div>
+                    </li>
+                    <li class="list-item close">
+                        <div class="div_2">
+                            <ul>
+                                <li>
+                                    <a href="profile_product.html">
+                                        商品販售管理
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="profile_product_rent.html">
+                                        商品租借管理
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="transaction_history_seller.html">
+                                        訂單管理
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailbox_s.html">租借訂單</a>
+                                </li>
+                                <li>
+                                    <a href="deposit.html">存款帳戶</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="problem_reply active">
+                        <a href="mailbox.html">問題回報</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-content">
+                <div class="mailsidebar">
+                </div>
+                <div class="mailcontent">
+                    <div class="action hidden">
+                        <div class="return">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h2>請點擊欲察看內容</h2>
+                    </div>
+                    <div class="mail-inside">
+                        <div id="first">
+                            <div class="mail-head">
+                                <div class="icon">
+                                    <div class="image hidden">
+                                        <img src="asdfasdf.png" alt="">
+                                    </div>
+                                    <div class="name">
+
+                                    </div>
+                                </div>
+                                <div class="date">
+
+                                </div>
+                            </div>
+                            <div class="mail-inside-content">
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mail-reply hidden">
+                        <div class="reply-title">
+                            回覆
+                        </div>
+                        <div class="reply">
+                            <textarea id="reply-textarea"></textarea>
+                        </div>
+                        <div class="footer-action">
+                            <div>
+                                <button class="insert">送出</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <div class="modal hidden">
+
+    </div>
+</body>
+
+<!-- API -->
+<script src="../js/api/chatroom.js"></script>
+<script src="../js/api/user.js"></script>
+<script src="../js/api/problem.js"></script>
+
+<!-- 頁面 -->
+<script src="../js/chatusers.js"></script>
+<script src="../js/profile/profile_p.js"></script>
+<script src="../js/profile/sidebar_mailbox.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/mailbox.js"></script>
+
+</html>
