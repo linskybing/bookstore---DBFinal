@@ -1,4 +1,4 @@
-# bookstore--DBFinal
+# 二手書租借交易平台--DBFinal
 
 1.Web資料夾為網頁前端畫面
 
