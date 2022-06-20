@@ -1,0 +1,179 @@
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 70px;
+    height: 850px;
+}
+
+.infoblock {
+    position: relative;
+    width: 100%;
+    background-image: url('../image/book-1283865_1920.jpg');
+    background-color: rgba(0, 0, 0, .2);
+    background-blend-mode: multiply;
+}
+
+.form {
+    position: absolute;
+    width: 500px;
+    height: 100%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(249, 249, 249, 0.911);
+    border-top-left-radius: 30%;
+
+
+}
+
+
+
+.title {
+    position: absolute;
+    z-index: 2;
+    right: 170px;
+    top: 70px;
+    margin-bottom: 50px;
+}
+
+.formgroup {
+    position: relative;
+    margin: 25px 0px;
+}
+
+.error {
+    align-self: center;
+    color: red;
+}
+
+.formgroup .sendbtn {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 125px;
+    height: 40px;
+    border: 2px solid #858585;
+    color: white;
+    cursor: pointer;
+}
+
+.sendbtn:hover {
+    border: 2px solid #0d6efd;
+}
+
+.sendbtn:hover span {
+    color: #0d6efd;
+}
+
+.sendbtn span {
+    text-align: center;
+    padding: 6px;
+    display: block;
+    color: black;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.formgroup svg {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    transition: .3s;
+    transform-origin: left;
+}
+
+.formgroup input[type=text],
+input[type=password] {
+    height: 40px;
+    width: 90%;
+    color: #858585;
+    background-color: rgba(249, 249, 249, 0);
+    padding: 0px 30px;
+    border: none;
+    border-bottom: 2px solid rgb(187, 187, 187);
+    letter-spacing: 2px;
+    font-size: 16px;
+    appearance: none;
+    outline: 0;
+}
+
+.invalid {
+    border-bottom: 2px solid red !important;
+}
+
+.formgroup input[type=text]:focus,
+input[type=password]:focus {
+    border-bottom: 2px solid rgb(112, 187, 248);
+}
+
+.loadmask {
+    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    background-color: #0000002f;
+    width: 100%;
+    height: 100%;
+}
+
+.load {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    z-index: 10;
+}
+
+.load hr {
+    border: 0;
+    margin: 0;
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    border-radius: 50%;
+    animation: spin 2s ease infinite
+}
+
+.load :first-child {
+    background: #19A68C;
+    animation-delay: -1.5s
+}
+
+.load :nth-child(2) {
+    background: #F63D3A;
+    animation-delay: -1s
+}
+
+.load :nth-child(3) {
+    background: #FDA543;
+    animation-delay: -0.5s
+}
+
+.load :last-child {
+    background: #193B48
+}
+
+@keyframes spin {
+
+    0%,
+    100% {
+        transform: translate(0)
+    }
+
+    25% {
+        transform: translate(160%)
+    }
+
+    50% {
+        transform: translate(160%, 160%)
+    }
+
+    75% {
+        transform: translate(0, 160%)
+    }
+}

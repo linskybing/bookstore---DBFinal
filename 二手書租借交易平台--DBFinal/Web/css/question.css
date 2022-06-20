@@ -1,0 +1,106 @@
+.question {
+    padding-left: 150px;
+}
+
+.question .member {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.question .member img {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.question .member .icon {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+.question .name {
+    font-weight: bolder;
+    width: 100px;
+}
+
+
+.question .questionbox {
+    margin: 10px 0px;
+
+}
+
+.question .questionbox .main {
+    margin: 10px 0px;
+}
+
+.question .questionbox .reply {
+    margin: 15px 0px;
+    padding-left: 7%;
+}
+
+.question .questionbox .reply .q_content {
+    padding-left: 61px;
+}
+
+.question .q_content {
+    padding-left: 61px;
+}
+
+.question textarea {
+    height: 300px;
+    width: 600px;
+    border-radius: 5px;
+    color: #727272;
+    letter-spacing: 1px;
+    outline: none;
+    line-height: 20px;
+    padding: 5px;
+    content: "";
+    resize: none;
+}
+
+.question .inputbox {
+    display: flex;
+    flex-direction: column;
+    width: 610px;
+    margin: 50px 0;
+}
+
+
+
+.question textarea:focus {
+    border: 1px solid rgb(255, 72, 0);
+}
+
+.question #submit {
+    outline: none;
+    border: none;
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 25px;
+    margin: 10px 0;
+    color: white;
+    background-color: #ff4800;
+    cursor: pointer;
+}
+
+.question .replybtn {
+    outline: none;
+    border: none;
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    margin: 10px 0;
+    color: white;
+    background-color: rgb(8, 122, 252);
+    cursor: pointer;
+}
